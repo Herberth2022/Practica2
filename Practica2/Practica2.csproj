@@ -1,0 +1,812 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{996ECB41-D874-4207-ADE8-F86D5466EA36}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Practica2</RootNamespace>
+    <AssemblyName>Practica2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44381</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BaseDatos\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDatos\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDatos\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDatos\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDatos\sp_helpdiagrams_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDatos\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDatos\Vehiculos.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDatos\Vendedores.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\VehiculoController.cs" />
+    <Compile Include="Controllers\VendedorController.cs" />
+    <Compile Include="Entidades\Vehiculo.cs" />
+    <Compile Include="Entidades\Vendedor.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VehiculoModel.cs" />
+    <Compile Include="Models\VendedorModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BaseDatos\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BaseDatos\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="root\dist\css\adminlte.css" />
+    <Content Include="root\dist\css\adminlte.min.css" />
+    <Content Include="root\dist\css\alt\adminlte.components.css" />
+    <Content Include="root\dist\css\alt\adminlte.components.min.css" />
+    <Content Include="root\dist\css\alt\adminlte.core.css" />
+    <Content Include="root\dist\css\alt\adminlte.core.min.css" />
+    <Content Include="root\dist\css\alt\adminlte.extra-components.css" />
+    <Content Include="root\dist\css\alt\adminlte.extra-components.min.css" />
+    <Content Include="root\dist\css\alt\adminlte.pages.css" />
+    <Content Include="root\dist\css\alt\adminlte.pages.min.css" />
+    <Content Include="root\dist\css\alt\adminlte.plugins.css" />
+    <Content Include="root\dist\css\alt\adminlte.plugins.min.css" />
+    <Content Include="root\dist\img\AdminLTELogo.png" />
+    <Content Include="root\dist\img\avatar.png" />
+    <Content Include="root\dist\img\avatar04.png" />
+    <Content Include="root\dist\img\avatar2.png" />
+    <Content Include="root\dist\img\avatar3.png" />
+    <Content Include="root\dist\img\avatar5.png" />
+    <Content Include="root\dist\img\boxed-bg.jpg" />
+    <Content Include="root\dist\img\boxed-bg.png" />
+    <Content Include="root\dist\img\credit\american-express.png" />
+    <Content Include="root\dist\img\credit\cirrus.png" />
+    <Content Include="root\dist\img\credit\mastercard.png" />
+    <Content Include="root\dist\img\credit\mestro.png" />
+    <Content Include="root\dist\img\credit\paypal.png" />
+    <Content Include="root\dist\img\credit\paypal2.png" />
+    <Content Include="root\dist\img\credit\visa.png" />
+    <Content Include="root\dist\img\default-150x150.png" />
+    <Content Include="root\dist\img\icons.png" />
+    <Content Include="root\dist\img\photo1.png" />
+    <Content Include="root\dist\img\photo2.png" />
+    <Content Include="root\dist\img\photo3.jpg" />
+    <Content Include="root\dist\img\photo4.jpg" />
+    <Content Include="root\dist\img\prod-1.jpg" />
+    <Content Include="root\dist\img\prod-2.jpg" />
+    <Content Include="root\dist\img\prod-3.jpg" />
+    <Content Include="root\dist\img\prod-4.jpg" />
+    <Content Include="root\dist\img\prod-5.jpg" />
+    <Content Include="root\dist\img\user1-128x128.jpg" />
+    <Content Include="root\dist\img\user2-160x160.jpg" />
+    <Content Include="root\dist\img\user3-128x128.jpg" />
+    <Content Include="root\dist\img\user4-128x128.jpg" />
+    <Content Include="root\dist\img\user5-128x128.jpg" />
+    <Content Include="root\dist\img\user6-128x128.jpg" />
+    <Content Include="root\dist\img\user7-128x128.jpg" />
+    <Content Include="root\dist\img\user8-128x128.jpg" />
+    <Content Include="root\dist\js\adminlte.js" />
+    <Content Include="root\dist\js\adminlte.min.js" />
+    <Content Include="root\dist\js\demo.js" />
+    <Content Include="root\dist\js\pages\dashboard.js" />
+    <Content Include="root\dist\js\pages\dashboard2.js" />
+    <Content Include="root\dist\js\pages\dashboard3.js" />
+    <Content Include="root\Plugins\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="root\Plugins\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="root\Plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="root\Plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="root\Plugins\chart.js\Chart.bundle.js" />
+    <Content Include="root\Plugins\chart.js\Chart.bundle.min.js" />
+    <Content Include="root\Plugins\chart.js\Chart.css" />
+    <Content Include="root\Plugins\chart.js\Chart.js" />
+    <Content Include="root\Plugins\chart.js\Chart.min.css" />
+    <Content Include="root\Plugins\chart.js\Chart.min.js" />
+    <Content Include="root\Plugins\daterangepicker\daterangepicker.css" />
+    <Content Include="root\Plugins\daterangepicker\daterangepicker.js" />
+    <Content Include="root\Plugins\daterangepicker\drp.png" />
+    <Content Include="root\Plugins\daterangepicker\example\amd\index.html" />
+    <Content Include="root\Plugins\daterangepicker\example\amd\main.js" />
+    <Content Include="root\Plugins\daterangepicker\example\amd\require.js" />
+    <Content Include="root\Plugins\daterangepicker\example\browserify\bundle.js" />
+    <Content Include="root\Plugins\daterangepicker\example\browserify\index.html" />
+    <Content Include="root\Plugins\daterangepicker\example\browserify\main.js" />
+    <Content Include="root\Plugins\daterangepicker\moment.min.js" />
+    <Content Include="root\Plugins\daterangepicker\package.js" />
+    <Content Include="root\Plugins\daterangepicker\website.css" />
+    <Content Include="root\Plugins\daterangepicker\website.js" />
+    <Content Include="root\Plugins\daterangepicker\website\index.html" />
+    <Content Include="root\Plugins\daterangepicker\website\website.css" />
+    <Content Include="root\Plugins\daterangepicker\website\website.js" />
+    <Content Include="root\Plugins\fontawesome-free\css\all.css" />
+    <Content Include="root\Plugins\fontawesome-free\css\all.min.css" />
+    <Content Include="root\Plugins\fontawesome-free\css\brands.css" />
+    <Content Include="root\Plugins\fontawesome-free\css\brands.min.css" />
+    <Content Include="root\Plugins\fontawesome-free\css\fontawesome.css" />
+    <Content Include="root\Plugins\fontawesome-free\css\fontawesome.min.css" />
+    <Content Include="root\Plugins\fontawesome-free\css\regular.css" />
+    <Content Include="root\Plugins\fontawesome-free\css\regular.min.css" />
+    <Content Include="root\Plugins\fontawesome-free\css\solid.css" />
+    <Content Include="root\Plugins\fontawesome-free\css\solid.min.css" />
+    <Content Include="root\Plugins\fontawesome-free\css\svg-with-js.css" />
+    <Content Include="root\Plugins\fontawesome-free\css\svg-with-js.min.css" />
+    <Content Include="root\Plugins\fontawesome-free\css\v4-shims.css" />
+    <Content Include="root\Plugins\fontawesome-free\css\v4-shims.min.css" />
+    <Content Include="root\Plugins\fontawesome-free\webfonts\fa-brands-400.svg" />
+    <Content Include="root\Plugins\fontawesome-free\webfonts\fa-regular-400.svg" />
+    <Content Include="root\Plugins\fontawesome-free\webfonts\fa-solid-900.svg" />
+    <Content Include="root\Plugins\icheck-bootstrap\icheck-bootstrap.css" />
+    <Content Include="root\Plugins\icheck-bootstrap\icheck-bootstrap.min.css" />
+    <Content Include="root\Plugins\jquery-knob\jquery.knob.min.js" />
+    <Content Include="root\Plugins\jquery-ui\AUTHORS.txt" />
+    <Content Include="root\Plugins\jquery-ui\external\jquery\jquery.js" />
+    <Content Include="root\Plugins\jquery-ui\images\ui-icons_444444_256x240.png" />
+    <Content Include="root\Plugins\jquery-ui\images\ui-icons_555555_256x240.png" />
+    <Content Include="root\Plugins\jquery-ui\images\ui-icons_777620_256x240.png" />
+    <Content Include="root\Plugins\jquery-ui\images\ui-icons_777777_256x240.png" />
+    <Content Include="root\Plugins\jquery-ui\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="root\Plugins\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="root\Plugins\jquery-ui\jquery-ui.css" />
+    <Content Include="root\Plugins\jquery-ui\jquery-ui.js" />
+    <Content Include="root\Plugins\jquery-ui\jquery-ui.min.css" />
+    <Content Include="root\Plugins\jquery-ui\jquery-ui.min.js" />
+    <Content Include="root\Plugins\jquery-ui\jquery-ui.structure.css" />
+    <Content Include="root\Plugins\jquery-ui\jquery-ui.structure.min.css" />
+    <Content Include="root\Plugins\jquery-ui\jquery-ui.theme.css" />
+    <Content Include="root\Plugins\jquery-ui\jquery-ui.theme.min.css" />
+    <Content Include="root\Plugins\jquery-ui\LICENSE.txt" />
+    <Content Include="root\Plugins\jquery\core.js" />
+    <Content Include="root\Plugins\jquery\jquery.js" />
+    <Content Include="root\Plugins\jquery\jquery.min.js" />
+    <Content Include="root\Plugins\jquery\jquery.slim.js" />
+    <Content Include="root\Plugins\jquery\jquery.slim.min.js" />
+    <Content Include="root\Plugins\jqvmap\jquery.vmap.js" />
+    <Content Include="root\Plugins\jqvmap\jquery.vmap.min.js" />
+    <Content Include="root\Plugins\jqvmap\jqvmap.css" />
+    <Content Include="root\Plugins\jqvmap\jqvmap.min.css" />
+    <Content Include="root\Plugins\jqvmap\maps\continents\jquery.vmap.africa.js" />
+    <Content Include="root\Plugins\jqvmap\maps\continents\jquery.vmap.asia.js" />
+    <Content Include="root\Plugins\jqvmap\maps\continents\jquery.vmap.australia.js" />
+    <Content Include="root\Plugins\jqvmap\maps\continents\jquery.vmap.europe.js" />
+    <Content Include="root\Plugins\jqvmap\maps\continents\jquery.vmap.north-america.js" />
+    <Content Include="root\Plugins\jqvmap\maps\continents\jquery.vmap.south-america.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.algeria.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.argentina.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.brazil.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.canada.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.croatia.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.europe.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.france.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.germany.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.greece.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.indonesia.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.iran.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.iraq.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.new_regions_france.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.russia.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.serbia.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.tunisia.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.turkey.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.ukraine.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.usa.counties.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.usa.districts.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.usa.js" />
+    <Content Include="root\Plugins\jqvmap\maps\jquery.vmap.world.js" />
+    <Content Include="root\Plugins\moment\locales.js" />
+    <Content Include="root\Plugins\moment\locales.min.js" />
+    <Content Include="root\Plugins\moment\locale\af.js" />
+    <Content Include="root\Plugins\moment\locale\ar-dz.js" />
+    <Content Include="root\Plugins\moment\locale\ar-kw.js" />
+    <Content Include="root\Plugins\moment\locale\ar-ly.js" />
+    <Content Include="root\Plugins\moment\locale\ar-ma.js" />
+    <Content Include="root\Plugins\moment\locale\ar-sa.js" />
+    <Content Include="root\Plugins\moment\locale\ar-tn.js" />
+    <Content Include="root\Plugins\moment\locale\ar.js" />
+    <Content Include="root\Plugins\moment\locale\az.js" />
+    <Content Include="root\Plugins\moment\locale\be.js" />
+    <Content Include="root\Plugins\moment\locale\bg.js" />
+    <Content Include="root\Plugins\moment\locale\bm.js" />
+    <Content Include="root\Plugins\moment\locale\bn.js" />
+    <Content Include="root\Plugins\moment\locale\bo.js" />
+    <Content Include="root\Plugins\moment\locale\br.js" />
+    <Content Include="root\Plugins\moment\locale\bs.js" />
+    <Content Include="root\Plugins\moment\locale\ca.js" />
+    <Content Include="root\Plugins\moment\locale\cs.js" />
+    <Content Include="root\Plugins\moment\locale\cv.js" />
+    <Content Include="root\Plugins\moment\locale\cy.js" />
+    <Content Include="root\Plugins\moment\locale\da.js" />
+    <Content Include="root\Plugins\moment\locale\de-at.js" />
+    <Content Include="root\Plugins\moment\locale\de-ch.js" />
+    <Content Include="root\Plugins\moment\locale\de.js" />
+    <Content Include="root\Plugins\moment\locale\dv.js" />
+    <Content Include="root\Plugins\moment\locale\el.js" />
+    <Content Include="root\Plugins\moment\locale\en-au.js" />
+    <Content Include="root\Plugins\moment\locale\en-ca.js" />
+    <Content Include="root\Plugins\moment\locale\en-gb.js" />
+    <Content Include="root\Plugins\moment\locale\en-ie.js" />
+    <Content Include="root\Plugins\moment\locale\en-il.js" />
+    <Content Include="root\Plugins\moment\locale\en-nz.js" />
+    <Content Include="root\Plugins\moment\locale\en-SG.js" />
+    <Content Include="root\Plugins\moment\locale\eo.js" />
+    <Content Include="root\Plugins\moment\locale\es-do.js" />
+    <Content Include="root\Plugins\moment\locale\es-us.js" />
+    <Content Include="root\Plugins\moment\locale\es.js" />
+    <Content Include="root\Plugins\moment\locale\et.js" />
+    <Content Include="root\Plugins\moment\locale\eu.js" />
+    <Content Include="root\Plugins\moment\locale\fa.js" />
+    <Content Include="root\Plugins\moment\locale\fi.js" />
+    <Content Include="root\Plugins\moment\locale\fo.js" />
+    <Content Include="root\Plugins\moment\locale\fr-ca.js" />
+    <Content Include="root\Plugins\moment\locale\fr-ch.js" />
+    <Content Include="root\Plugins\moment\locale\fr.js" />
+    <Content Include="root\Plugins\moment\locale\fy.js" />
+    <Content Include="root\Plugins\moment\locale\ga.js" />
+    <Content Include="root\Plugins\moment\locale\gd.js" />
+    <Content Include="root\Plugins\moment\locale\gl.js" />
+    <Content Include="root\Plugins\moment\locale\gom-latn.js" />
+    <Content Include="root\Plugins\moment\locale\gu.js" />
+    <Content Include="root\Plugins\moment\locale\he.js" />
+    <Content Include="root\Plugins\moment\locale\hi.js" />
+    <Content Include="root\Plugins\moment\locale\hr.js" />
+    <Content Include="root\Plugins\moment\locale\hu.js" />
+    <Content Include="root\Plugins\moment\locale\hy-am.js" />
+    <Content Include="root\Plugins\moment\locale\id.js" />
+    <Content Include="root\Plugins\moment\locale\is.js" />
+    <Content Include="root\Plugins\moment\locale\it-ch.js" />
+    <Content Include="root\Plugins\moment\locale\it.js" />
+    <Content Include="root\Plugins\moment\locale\ja.js" />
+    <Content Include="root\Plugins\moment\locale\jv.js" />
+    <Content Include="root\Plugins\moment\locale\ka.js" />
+    <Content Include="root\Plugins\moment\locale\kk.js" />
+    <Content Include="root\Plugins\moment\locale\km.js" />
+    <Content Include="root\Plugins\moment\locale\kn.js" />
+    <Content Include="root\Plugins\moment\locale\ko.js" />
+    <Content Include="root\Plugins\moment\locale\ku.js" />
+    <Content Include="root\Plugins\moment\locale\ky.js" />
+    <Content Include="root\Plugins\moment\locale\lb.js" />
+    <Content Include="root\Plugins\moment\locale\lo.js" />
+    <Content Include="root\Plugins\moment\locale\lt.js" />
+    <Content Include="root\Plugins\moment\locale\lv.js" />
+    <Content Include="root\Plugins\moment\locale\me.js" />
+    <Content Include="root\Plugins\moment\locale\mi.js" />
+    <Content Include="root\Plugins\moment\locale\mk.js" />
+    <Content Include="root\Plugins\moment\locale\ml.js" />
+    <Content Include="root\Plugins\moment\locale\mn.js" />
+    <Content Include="root\Plugins\moment\locale\mr.js" />
+    <Content Include="root\Plugins\moment\locale\ms-my.js" />
+    <Content Include="root\Plugins\moment\locale\ms.js" />
+    <Content Include="root\Plugins\moment\locale\mt.js" />
+    <Content Include="root\Plugins\moment\locale\my.js" />
+    <Content Include="root\Plugins\moment\locale\nb.js" />
+    <Content Include="root\Plugins\moment\locale\ne.js" />
+    <Content Include="root\Plugins\moment\locale\nl-be.js" />
+    <Content Include="root\Plugins\moment\locale\nl.js" />
+    <Content Include="root\Plugins\moment\locale\nn.js" />
+    <Content Include="root\Plugins\moment\locale\pa-in.js" />
+    <Content Include="root\Plugins\moment\locale\pl.js" />
+    <Content Include="root\Plugins\moment\locale\pt-br.js" />
+    <Content Include="root\Plugins\moment\locale\pt.js" />
+    <Content Include="root\Plugins\moment\locale\ro.js" />
+    <Content Include="root\Plugins\moment\locale\ru.js" />
+    <Content Include="root\Plugins\moment\locale\sd.js" />
+    <Content Include="root\Plugins\moment\locale\se.js" />
+    <Content Include="root\Plugins\moment\locale\si.js" />
+    <Content Include="root\Plugins\moment\locale\sk.js" />
+    <Content Include="root\Plugins\moment\locale\sl.js" />
+    <Content Include="root\Plugins\moment\locale\sq.js" />
+    <Content Include="root\Plugins\moment\locale\sr-cyrl.js" />
+    <Content Include="root\Plugins\moment\locale\sr.js" />
+    <Content Include="root\Plugins\moment\locale\ss.js" />
+    <Content Include="root\Plugins\moment\locale\sv.js" />
+    <Content Include="root\Plugins\moment\locale\sw.js" />
+    <Content Include="root\Plugins\moment\locale\ta.js" />
+    <Content Include="root\Plugins\moment\locale\te.js" />
+    <Content Include="root\Plugins\moment\locale\tet.js" />
+    <Content Include="root\Plugins\moment\locale\tg.js" />
+    <Content Include="root\Plugins\moment\locale\th.js" />
+    <Content Include="root\Plugins\moment\locale\tl-ph.js" />
+    <Content Include="root\Plugins\moment\locale\tlh.js" />
+    <Content Include="root\Plugins\moment\locale\tr.js" />
+    <Content Include="root\Plugins\moment\locale\tzl.js" />
+    <Content Include="root\Plugins\moment\locale\tzm-latn.js" />
+    <Content Include="root\Plugins\moment\locale\tzm.js" />
+    <Content Include="root\Plugins\moment\locale\ug-cn.js" />
+    <Content Include="root\Plugins\moment\locale\uk.js" />
+    <Content Include="root\Plugins\moment\locale\ur.js" />
+    <Content Include="root\Plugins\moment\locale\uz-latn.js" />
+    <Content Include="root\Plugins\moment\locale\uz.js" />
+    <Content Include="root\Plugins\moment\locale\vi.js" />
+    <Content Include="root\Plugins\moment\locale\x-pseudo.js" />
+    <Content Include="root\Plugins\moment\locale\yo.js" />
+    <Content Include="root\Plugins\moment\locale\zh-cn.js" />
+    <Content Include="root\Plugins\moment\locale\zh-hk.js" />
+    <Content Include="root\Plugins\moment\locale\zh-tw.js" />
+    <Content Include="root\Plugins\moment\moment-with-locales.js" />
+    <Content Include="root\Plugins\moment\moment-with-locales.min.js" />
+    <Content Include="root\Plugins\moment\moment.min.js" />
+    <Content Include="root\Plugins\overlayScrollbars\css\OverlayScrollbars.css" />
+    <Content Include="root\Plugins\overlayScrollbars\css\OverlayScrollbars.min.css" />
+    <Content Include="root\Plugins\overlayScrollbars\js\jquery.overlayScrollbars.js" />
+    <Content Include="root\Plugins\overlayScrollbars\js\jquery.overlayScrollbars.min.js" />
+    <Content Include="root\Plugins\overlayScrollbars\js\OverlayScrollbars.js" />
+    <Content Include="root\Plugins\overlayScrollbars\js\OverlayScrollbars.min.js" />
+    <Content Include="root\Plugins\sparklines\sparkline.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ar-AR.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ar-AR.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ar-AR.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-az-AZ.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-az-AZ.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-az-AZ.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-bg-BG.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-bg-BG.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-bg-BG.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ca-ES.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ca-ES.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ca-ES.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-cs-CZ.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-cs-CZ.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-cs-CZ.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-da-DK.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-da-DK.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-da-DK.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-de-DE.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-de-DE.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-de-DE.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-el-GR.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-el-GR.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-el-GR.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-es-ES.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-es-ES.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-es-ES.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-es-EU.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-es-EU.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-es-EU.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-fa-IR.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-fa-IR.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-fa-IR.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-fi-FI.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-fi-FI.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-fi-FI.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-fr-FR.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-fr-FR.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-fr-FR.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-gl-ES.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-gl-ES.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-gl-ES.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-he-IL.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-he-IL.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-he-IL.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-hr-HR.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-hr-HR.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-hr-HR.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-hu-HU.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-hu-HU.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-hu-HU.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-id-ID.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-id-ID.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-id-ID.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-it-IT.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-it-IT.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-it-IT.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ja-JP.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ja-JP.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ja-JP.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ko-KR.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ko-KR.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ko-KR.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-lt-LT.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-lt-LT.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-lt-LT.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-lt-LV.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-lt-LV.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-lt-LV.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-mn-MN.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-mn-MN.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-mn-MN.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-nb-NO.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-nb-NO.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-nb-NO.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-nl-NL.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-nl-NL.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-nl-NL.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-pl-PL.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-pl-PL.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-pl-PL.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-pt-BR.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-pt-BR.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-pt-BR.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-pt-PT.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-pt-PT.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-pt-PT.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ro-RO.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ro-RO.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ro-RO.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ru-RU.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ru-RU.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ru-RU.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-sk-SK.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-sk-SK.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-sk-SK.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-sl-SI.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-sl-SI.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-sl-SI.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-sr-RS-Latin.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-sr-RS-Latin.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-sr-RS-Latin.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-sr-RS.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-sr-RS.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-sr-RS.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-sv-SE.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-sv-SE.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-sv-SE.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ta-IN.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ta-IN.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-ta-IN.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-th-TH.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-th-TH.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-th-TH.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-tr-TR.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-tr-TR.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-tr-TR.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-uk-UA.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-uk-UA.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-uk-UA.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-uz-UZ.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-uz-UZ.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-uz-UZ.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-vi-VN.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-vi-VN.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-vi-VN.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-zh-CN.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-zh-CN.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-zh-CN.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\lang\summernote-zh-TW.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-zh-TW.min.js" />
+    <Content Include="root\Plugins\summernote\lang\summernote-zh-TW.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\plugin\databasic\summernote-ext-databasic.css" />
+    <Content Include="root\Plugins\summernote\plugin\databasic\summernote-ext-databasic.js" />
+    <Content Include="root\Plugins\summernote\plugin\hello\summernote-ext-hello.js" />
+    <Content Include="root\Plugins\summernote\plugin\specialchars\summernote-ext-specialchars.js" />
+    <Content Include="root\Plugins\summernote\summernote-bs4.css" />
+    <Content Include="root\Plugins\summernote\summernote-bs4.js" />
+    <Content Include="root\Plugins\summernote\summernote-bs4.min.css" />
+    <Content Include="root\Plugins\summernote\summernote-bs4.min.js" />
+    <Content Include="root\Plugins\summernote\summernote-bs4.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\summernote-lite.css" />
+    <Content Include="root\Plugins\summernote\summernote-lite.js" />
+    <Content Include="root\Plugins\summernote\summernote-lite.min.css" />
+    <Content Include="root\Plugins\summernote\summernote-lite.min.js" />
+    <Content Include="root\Plugins\summernote\summernote-lite.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\summernote\summernote.css" />
+    <Content Include="root\Plugins\summernote\summernote.js" />
+    <Content Include="root\Plugins\summernote\summernote.min.css" />
+    <Content Include="root\Plugins\summernote\summernote.min.js" />
+    <Content Include="root\Plugins\summernote\summernote.min.js.LICENSE.txt" />
+    <Content Include="root\Plugins\tempusdominus-bootstrap-4\css\tempusdominus-bootstrap-4.css" />
+    <Content Include="root\Plugins\tempusdominus-bootstrap-4\css\tempusdominus-bootstrap-4.min.css" />
+    <Content Include="root\Plugins\tempusdominus-bootstrap-4\js\tempusdominus-bootstrap-4.js" />
+    <Content Include="root\Plugins\tempusdominus-bootstrap-4\js\tempusdominus-bootstrap-4.min.js" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="BaseDatos\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="BaseDatos\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="root\Plugins\daterangepicker\bower.json" />
+    <Content Include="root\Plugins\daterangepicker\example\browserify\README.md" />
+    <Content Include="root\dist\css\adminlte.css.map" />
+    <Content Include="root\dist\css\adminlte.min.css.map" />
+    <Content Include="root\dist\css\alt\adminlte.components.css.map" />
+    <Content Include="root\dist\css\alt\adminlte.components.min.css.map" />
+    <Content Include="root\dist\css\alt\adminlte.core.css.map" />
+    <Content Include="root\dist\css\alt\adminlte.core.min.css.map" />
+    <Content Include="root\dist\css\alt\adminlte.extra-components.css.map" />
+    <Content Include="root\dist\css\alt\adminlte.extra-components.min.css.map" />
+    <Content Include="root\dist\css\alt\adminlte.pages.css.map" />
+    <Content Include="root\dist\css\alt\adminlte.pages.min.css.map" />
+    <Content Include="root\dist\css\alt\adminlte.plugins.css.map" />
+    <Content Include="root\dist\css\alt\adminlte.plugins.min.css.map" />
+    <Content Include="root\dist\js\adminlte.js.map" />
+    <Content Include="root\dist\js\adminlte.min.js.map" />
+    <Content Include="root\Plugins\fontawesome-free\webfonts\fa-brands-400.eot" />
+    <Content Include="root\Plugins\fontawesome-free\webfonts\fa-brands-400.ttf" />
+    <Content Include="root\Plugins\fontawesome-free\webfonts\fa-brands-400.woff" />
+    <Content Include="root\Plugins\fontawesome-free\webfonts\fa-brands-400.woff2" />
+    <Content Include="root\Plugins\fontawesome-free\webfonts\fa-regular-400.eot" />
+    <Content Include="root\Plugins\fontawesome-free\webfonts\fa-regular-400.ttf" />
+    <Content Include="root\Plugins\fontawesome-free\webfonts\fa-regular-400.woff" />
+    <Content Include="root\Plugins\fontawesome-free\webfonts\fa-regular-400.woff2" />
+    <Content Include="root\Plugins\fontawesome-free\webfonts\fa-solid-900.eot" />
+    <Content Include="root\Plugins\fontawesome-free\webfonts\fa-solid-900.ttf" />
+    <Content Include="root\Plugins\fontawesome-free\webfonts\fa-solid-900.woff" />
+    <Content Include="root\Plugins\fontawesome-free\webfonts\fa-solid-900.woff2" />
+    <Content Include="root\Plugins\icheck-bootstrap\LICENSE" />
+    <Content Include="root\Plugins\summernote\font\summernote.eot" />
+    <Content Include="root\Plugins\summernote\font\summernote.ttf" />
+    <Content Include="root\Plugins\summernote\font\summernote.woff" />
+    <Content Include="root\Plugins\summernote\font\summernote.woff2" />
+    <Content Include="root\Plugins\summernote\summernote-bs4.js.map" />
+    <Content Include="root\Plugins\summernote\summernote-bs4.min.js.map" />
+    <Content Include="root\Plugins\summernote\summernote-lite.js.map" />
+    <Content Include="root\Plugins\summernote\summernote-lite.min.js.map" />
+    <Content Include="root\Plugins\summernote\summernote.js.map" />
+    <Content Include="root\Plugins\summernote\summernote.min.js.map" />
+    <Content Include="root\Plugins\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="root\Plugins\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="root\Plugins\bootstrap\js\bootstrap.js.map" />
+    <Content Include="root\Plugins\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="root\Plugins\jquery\jquery.min.map" />
+    <Content Include="root\Plugins\jquery\jquery.slim.min.map" />
+    <None Include="Scripts\jquery-3.7.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.7.0.js" />
+    <Content Include="Scripts\jquery-3.7.0.min.js" />
+    <Content Include="Scripts\jquery-3.7.0.slim.js" />
+    <Content Include="Scripts\jquery-3.7.0.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\RegistroVendedor.cshtml" />
+    <Content Include="Views\Home\RegistroVehiculo.cshtml" />
+    <Content Include="Views\Home\ConsultaVehiculos.cshtml" />
+    <Content Include="Views\Shared\_Layout2.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Vehiculo\" />
+    <Folder Include="Views\Vendedor\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.7.0.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64241</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44381/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
